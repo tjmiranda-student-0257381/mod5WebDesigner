@@ -1,0 +1,279 @@
+/* General Responsive Reset */
+* { 
+    box-sizing: border-box; 
+}
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    line-height: 1.6; 
+}
+
+/* Header & Logo */
+header { 
+    background: #1a1a1a; 
+    color: #fff; 
+    padding: 1rem 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: relative; 
+}
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.site-logo a {
+    display: inline-flex;
+    line-height: 0;
+}
+.site-logo svg {
+    display: block;
+    height: 40px;
+    width: auto;
+}
+
+/* Hamburger Menu (Mobile Default) */
+.hamburger { 
+    cursor: pointer; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 5px; 
+    z-index: 100; 
+}
+.hamburger div { 
+    width: 30px; 
+    height: 3px; 
+    background-color: white; 
+    transition: all 0.3s ease; 
+}
+
+/* Dropdown Navigation (Mobile Default) */
+nav { 
+    position: absolute; 
+    top: 100%; 
+    right: 0; 
+    background: #2a2a2a; 
+    width: 250px; 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.3s ease-out; 
+    display: flex; 
+    flex-direction: column; 
+    z-index: 99; 
+    box-shadow: -2px 5px 10px rgba(0,0,0,0.5);
+}
+nav.open { 
+    max-height: 400px; 
+}
+nav a { 
+    color: #fff; 
+    padding: 15px 20px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    border-bottom: 1px solid #444; 
+}
+nav a:hover { 
+    background: #f00303; 
+}
+
+/* Hamburger Animation into an 'X' */
+.hamburger.open div:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+.hamburger.open div:nth-child(2) { opacity: 0; }
+.hamburger.open div:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+/* --- DESKTOP NAVIGATION OVERRIDES --- */
+@media(min-width: 768px) {
+    /* Hide the hamburger icon on larger screens */
+    .hamburger {
+        display: none;
+    }
+    
+    /* Change navigation to a horizontal bar in the header */
+    nav {
+        position: static;        /* Keep it in normal flow of the header */
+        width: auto;             /* Remove the fixed 250px width */
+        max-height: none;        /* Override the 0 max-height so it's always visible */
+        overflow: visible;
+        background: transparent; /* Remove dropdown background */
+        flex-direction: row;     /* Align links horizontally */
+        box-shadow: none;        /* Remove shadow */
+        gap: 15px;               /* Space out the links */
+    }
+    
+    nav a {
+        padding: 5px 10px;
+        border-bottom: none;     /* Remove the dividing lines */
+        border-radius: 4px;      /* Slight rounding on hover */
+    }
+}
+
+/* Main Content Formatting */
+.container { 
+    padding: 20px; 
+    max-width: 800px; 
+    margin: auto; 
+    min-height: 60vh; 
+}
+footer { 
+    background: #1a1a1a; 
+    color: #fff; 
+    text-align: center; 
+    padding: 25px 15px; 
+    margin-top: 40px; 
+}
+
+/* Footer menu + social icons */
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    margin-bottom: 14px;
+}
+.footer-nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 0.95em;
+}
+.footer-nav a:hover,
+.footer-nav a:focus {
+    color: #fff;
+    text-decoration: underline;
+}
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+.footer-social a {
+    color: #ddd;
+    display: inline-flex;
+    transition: color 0.2s ease;
+}
+.footer-social a:hover,
+.footer-social a:focus {
+    color: #1877f2;
+}
+footer p {
+    margin: 0;
+    font-size: 0.85em;
+    color: #bbb;
+}
+
+/* Responsive Form (Home Page) */
+input, textarea { 
+    width: 100%; 
+    padding: 10px; 
+    margin-top: 5px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+}
+button { 
+    background: #333; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    width: 100%; 
+    font-size: 1rem;
+}
+button:hover { 
+    background: #f00303; 
+}
+
+/* Profile Picture (About Page) */
+.profile-pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0 25px;
+}
+.profile-pic img {
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #333;
+}
+.profile-pic figcaption {
+    max-width: 480px;
+    margin-top: 12px;
+    font-size: 0.85em;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+    color: #666;
+}
+
+/* 5 Fun Facts About Me (Home Page) */
+.fun-facts {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.fun-facts li a {
+    display: block;
+    background: #f4f4f4;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 16px;
+    border-radius: 5px;
+    border-left: 4px solid #333;
+    transition: background 0.2s ease;
+}
+.fun-facts li a:hover {
+    background: #e3f2fd;
+    border-left-color: #1976d2;
+}
+
+/* Service List, Payment Info, and FAQs */
+.service-list { 
+    background: #f9f9f9; 
+    padding: 20px; 
+    border-radius: 5px; 
+}
+.payment-info { 
+    background: #e3f2fd; 
+    padding: 15px; 
+    border-left: 4px solid #1976d2; 
+    margin-top: 20px; 
+}
+.faq { 
+    margin-bottom: 20px; 
+}
+
+/* Media Queries for Larger Screens */
+@media(min-width: 600px) {
+    button { 
+        width: auto; 
+    }
+}
+
+/* Floating Background Image */
+.floating-bg {
+    position: fixed;
+    bottom: 0;
+    right: 5%;         /* Keeps the image anchored to the bottom right */
+    height: 85vh;      /* Scales the image height based on screen size */
+    width: auto;
+    z-index: -1;       /* Puts the image strictly behind all text and containers */
+    opacity: 0.15;     /* Makes it transparent so you can read the text over it */
+    pointer-events: none; /* Prevents the image from blocking clicks on links/forms */
+}
+
+/* Mobile Responsiveness for the Background */
+@media(max-width: 600px) {
+    .floating-bg {
+        height: 60vh;  /* Shrinks the image on mobile */
+        right: -10%;   /* Shifts it slightly off-screen to give text more room */
+        opacity: 0.1;  /* Lowers opacity slightly more on small screens */
+    }
+}
