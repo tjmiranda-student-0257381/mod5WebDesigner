@@ -3,21 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J. Randa - FAQs</title>
+    <title>J. Randa - Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Floating Background Image -->
+    <!-- CRITICAL: Make sure the file in GitHub is named EXACTLY IMG_4320.PNG -->
+    <img src="images/IMG_4320.png" alt="JoJo Randa Background" class="floating-bg">
+
+
+    <!-- HEADER (Closes before the main content) -->
     <header>
         <h1 class="site-logo"><a href="index.html" aria-label="JoJo Randa - Home"><svg viewBox="0 0 190 56" width="150" height="44" role="img" aria-hidden="true" focusable="false"><text x="4" y="42" font-family="'Dancing Script', cursive" font-weight="700" font-size="40" fill="#f7f4ee">J. Randa</text></svg></a></h1>
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <nav id="nav-menu">
+        
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <!-- Navigation Links -->
+        <nav id="nav-menu">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
@@ -25,8 +35,9 @@
             <a href="terms.html">Terms</a>
             <a href="privacy.html">Privacy</a>
     </nav>
-</header>
+    </header>
     <div class="container">
+        <h3>Frequently Asked Questions (FAQs)</h3>
         <div class="faq">
             <h3>Where are you located?</h3>
             <p>I am based in Hanford, CA and serve the surrounding local areas.</p>
