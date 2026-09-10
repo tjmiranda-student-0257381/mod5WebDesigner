@@ -9,6 +9,12 @@ body {
     line-height: 1.6; 
 }
 
+/* Global Link Styling */
+a {
+    text-decoration: none;
+    color: inherit; /* Automatically makes links match their parent container's text color */
+}
+
 /* Header & Logo */
 header { 
     background: #1a1a1a; 
@@ -68,9 +74,7 @@ nav.open {
     max-height: 400px; 
 }
 nav a { 
-    color: #fff; 
     padding: 15px 20px; 
-    text-decoration: none; 
     font-weight: bold; 
     border-bottom: 1px solid #444; 
 }
@@ -133,14 +137,12 @@ footer {
     margin-bottom: 14px;
 }
 .footer-nav a {
-    color: #ddd;
-    text-decoration: none;
     font-size: 0.95em;
 }
 .footer-nav a:hover,
 .footer-nav a:focus {
-    color: #fff;
-    text-decoration: underline;
+    /* Optional: add an effect on hover since underlines are gone */
+    opacity: 0.8; 
 }
 .footer-social {
     display: flex;
@@ -149,7 +151,6 @@ footer {
     margin-bottom: 12px;
 }
 .footer-social a {
-    color: #ddd;
     display: inline-flex;
     transition: color 0.2s ease;
 }
@@ -221,8 +222,6 @@ button:hover {
 .fun-facts li a {
     display: block;
     background: #f4f4f4;
-    color: #1a1a1a;
-    text-decoration: none;
     font-weight: bold;
     padding: 12px 16px;
     border-radius: 5px;
