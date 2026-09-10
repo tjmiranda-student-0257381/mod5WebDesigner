@@ -3,19 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J. Randa - Home</title>
+    <title>J. Randa - FAQs</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional formatting for the FAQs layout */
+        .faq-content h2 {
+            margin-bottom: 30px;
+        }
+        .faq {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+        .faq:last-child {
+            border-bottom: none;
+        }
+        .faq h3 {
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        .faq p {
+            font-size: 0.95rem;
+            color: #333;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Floating Background Image -->
-    <!-- CRITICAL: Make sure the file in GitHub is named EXACTLY IMG_4320.PNG -->
     <img src="images/IMG_4320.png" alt="JoJo Randa Background" class="floating-bg">
 
-
-    <!-- HEADER (Closes before the main content) -->
+    <!-- HEADER -->
     <header>
         <h1 class="site-logo"><a href="index.html" aria-label="JoJo Randa - Home"><svg viewBox="0 0 190 56" width="150" height="44" role="img" aria-hidden="true" focusable="false"><text x="4" y="42" font-family="'Dancing Script', cursive" font-weight="700" font-size="40" fill="#f7f4ee">J. Randa</text></svg></a></h1>
         
@@ -34,46 +56,63 @@
             <a href="faqs.html">FAQs</a>
             <a href="terms.html">Terms</a>
             <a href="privacy.html">Privacy</a>
-    </nav>
+        </nav>
     </header>
-    <div class="container">
-        <h3>Frequently Asked Questions (FAQs)</h3>
+
+    <div class="container faq-content">
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        
         <div class="faq">
             <h3>Where are you located?</h3>
             <p>I am based in Hanford, CA and serve the surrounding local areas.</p>
         </div>
+        
         <div class="faq">
             <h3>Do you speak any languages other than English?</h3>
             <p>Yes, I am fluent in both English and Tagalog.</p>
         </div>
+        
         <div class="faq">
             <h3>How do payments work?</h3>
-            <p>Payments are processed via Zelle, Venmo, or Cash.</p>
+            <p>Payments are securely processed via Zelle, Venmo, or Cash upon completion of the service.</p>
         </div>
+        
         <div class="faq">
             <h3>How can I request a service?</h3>
-            <p>You can request services or ask questions by filling out the Contact Form on the Home page.</p>
+            <p>You can request services or ask questions by filling out the Contact Form on the <a href="index.html">Home</a> page.</p>
+        </div>
+        
+        <div class="faq">
+            <h3>Do I need to be home when you provide services?</h3>
+            <p>It depends on the service. For exterior yard maintenance, you do not need to be home as long as I have access to the property. For interior moving or cleaning services, you or a trusted representative must be present to provide access.</p>
+        </div>
+        
+        <div class="faq">
+            <h3>What happens if I need to cancel?</h3>
+            <p>We request at least 24 hours' notice for cancellations or rescheduling. You can read more details on our <a href="terms.html">Terms of Service</a> page.</p>
         </div>
     </div>
-    <footer>
+    
+    <footer> <!-- Footer Menyu -->
         <nav class="footer-nav">
             <a href="terms.html">Terms</a>
             <a href="privacy.html">Privacy</a>
             <a href="faqs.html">FAQs</a>
         </nav>
-        <div class="footer-social">
+        <div class="footer-social"> <!-- Fishbook ni Tausug -->
             <a href="https://www.facebook.com/joseph.randa357TAUSUG" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg>
             </a>
         </div>
-        <p>&copy; 2026 Joseph Randa. All rights reserved. <br><br><b></b>Developed by <a href="https://tjmiranda.com" target="_blank" rel="noopener noreferrer">TJ Miranda.</a></b></p>
+        <p>&copy; 2026 Joseph Randa. All rights reserved. <br><br><b></b>Developed 
+            by <a href="https://tjmiranda.com" target="_blank" rel="noopener noreferrer">TJ Miranda.</a>
+        </b> | <a href="https://github.com/tjmiranda-student-0257381" target="_blank" rel="noopener noreferrer">GitHub</a></p>
     </footer>
-</body>
     <script>
-    function toggleMenu() {
-        document.getElementById('hamburger').classList.toggle('open');
-        document.getElementById('nav-menu').classList.toggle('open');
-    }
-</script>
-
+        function toggleMenu() {
+            document.getElementById('hamburger').classList.toggle('open');
+            document.getElementById('nav-menu').classList.toggle('open');
+        }
+    </script>
+</body>
 </html>
