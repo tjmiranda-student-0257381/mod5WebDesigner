@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Designer - Contact</title>
+</head>
+<body>
+    <header>
+    <Div class="logo">
+            <a href="index.html" target="_self"><h3>Web Designer</h3></a>    
+    </Div>   
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faqs.html">Faqs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main class="main-content"><!--main content-->
+        <div class="main-content">
+            <h2>Contact Us</h2>
+            <p>lorem ipsum dolor sit amet consectetur adipiscing elit dolor culpa dolore animi nam eum dolor consequatur quos et animi ducimus 
+                repellendus vel et excepteur excepturi praesentium culpa eu laboris quibusdam veniam facilis dolor deserunt consequatur et quas 
+                facere do omnis animi quod eligendi ea officia sed eos voluptas sed facere.
+            </p>
+            <p>lorem ipsum dolor sit amet consectetur adipiscing elit dolor culpa dolore animi nam eum dolor consequatur quos et animi ducimus 
+                repellendus vel et excepteur excepturi praesentium culpa eu laboris quibusdam veniam facilis dolor deserunt consequatur et quas 
+                facere do omnis animi quod eligendi ea officia sed eos voluptas sed facere.
+            </p>
+            <p>lorem ipsum dolor sit amet consectetur adipiscing elit dolor culpa dolore animi nam eum dolor consequatur quos et animi ducimus 
+                repellendus vel et excepteur excepturi praesentium culpa eu laboris quibusdam veniam facilis dolor deserunt consequatur et quas 
+                facere do omnis animi quod eligendi ea officia sed eos voluptas sed facere.
+            </p>
+        </div>
+        <!--Contact Information-->
+        <section id="contact-us">
+          <div class="form-container">
+            <h2>Contact Us</h2>
+            <!-- Since static site from github doesnt have dbase, we can use this free tool formspree-->
+            <form action="https://formspree.io/f/xvkgozgo" method="POST">
+              <div class="form-grid">
+                <div class="form-left">
+                  <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <select id="subject" name="subject" required>
+                      <option value="" disabled selected>
+                        Select a topic...
+                      </option>
+                      <option value="Services Offered One">
+                        Services Offered One
+                      </option>
+                      <option value="Services Offered Two">
+                        Services Offered Two
+                      </option>
+                      <option value="Services Offered Three">
+                        Services Offered Three
+                      </option>
+                      <option value="Other Services Inquiry">
+                        Other Services Inquiry
+                      </option>
+                      <option value="Let's Collaborate">
+                        Let's Collaborate
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="fullname">Full Name *</label>
+                    <input
+                      type="text"
+                      id="fullname"
+                      name="fullname"
+                      placeholder="John Doe"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="name@example.com"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone">Contact Number *</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="(555) 000-0000"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group"> <!-- Services offered to 18 years old or older only-->
+                    <label for="dob">Date of Birth *</label>
+                    <input type="date" id="dob" name="dob" required />
+                  </div>
+                </div>
+
+                <div class="form-right">
+                  <div class="form-group message-group">
+                    <label for="message">Message *</label>
+                    <textarea
+                      maxlength="1500"
+                      id="message"
+                      name="message"
+                      placeholder="Write your message here..."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="button-wrapper">
+                    <button type="submit" class="submit-btn">
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+            
+    </main>
+    <footer>
+        <div class="footer-content">
+        <p>&copy; 2026 <a href="index.html" target="_self">TJ Miranda</a> | All rights reserved | <a href="https://github.com/tjmiranda-student-0257381" target="_blank">GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>
